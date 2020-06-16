@@ -2,19 +2,21 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <title>Hello World!</title>
+    <title>Electron boilerplate</title>
     <link rel="stylesheet" href="./scss/custom.css" />
   </head>
   <body>
+    <div id="app">
+      {{ message }}
+    </div>
     <script src="js/vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          message: "Hello Vue!",
+        },
+      });
+    </script>
   </body>
 </html>
